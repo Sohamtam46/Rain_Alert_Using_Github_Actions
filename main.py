@@ -14,7 +14,7 @@ def send_email(message):
         connection.sendmail(
                             from_addr=MY_EMAIL,
                             to_addrs=TO_EMAIL,
-                            msg=f"Subject:🤓Weather Update!\n\n{message}"
+                            msg=f"Subject:Weather Update!\n\n{message}"
                             )
 
 OPEN_WEATHER_API_KEY = os.environ.get("OWM_API_KEY")
