@@ -14,7 +14,7 @@ def send_email(message):
         connection.sendmail(
                             from_addr=MY_EMAIL,
                             to_addrs=TO_EMAIL,
-                            msg=f"Subject:😺Weather Update!\n\n{message}"
+                            msg=f"Subject:🤓Weather Update!\n\n{message}"
                             )
 
 OPEN_WEATHER_API_KEY = os.environ.get("OWM_API_KEY")
@@ -31,8 +31,8 @@ response = requests.get(url="https://api.openweathermap.org/data/2.5/forecast", 
 response.raise_for_status()
 data = response.json()
 
-RAINY_WEATHER_MESSAGE = "Its Gonna rain🌧️. Carry an Umbrella☔!"
-CLEAR_WEATHER_MESSAGE = "It's Sunny☀️ Outside! Got to the beach🏖️"
+RAINY_WEATHER_MESSAGE = "Its Gonna rain. Carry an Umbrella!"
+CLEAR_WEATHER_MESSAGE = "It's Sunny Outside! Got to the beach"
 
 will_rain = False
 weather_codes = [int(data_point["weather"][0]["id"]) for data_point in data["list"] if int(data_point["weather"][0]["id"]) < 700]
