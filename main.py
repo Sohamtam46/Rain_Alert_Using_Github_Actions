@@ -31,7 +31,7 @@ response.raise_for_status()
 data = response.json()
 
 RAINY_WEATHER_MESSAGE = "Its Gonna rain. Carry an Umbrella!"
-CLEAR_WEATHER_MESSAGE = "It's Sunny Outside! Got to the beach"
+CLEAR_WEATHER_MESSAGE = "It's Sunny Outside! Go to the beach!"
 
 will_rain = False
 weather_codes = [int(data_point["weather"][0]["id"]) for data_point in data["list"] if int(data_point["weather"][0]["id"]) < 700]
